@@ -25,14 +25,15 @@ function keysToString(object) {
 
 function valuesToString(object) {
     //Should take an object and return all its string values in a string 
-    //each separated with a space"
-    var newString = ''; //create item to return
+    //each separated with a space
+    var stArr = [];
     var tempArr = Object.values(object); //extract values from objects
         for (i = 0; i < tempArr.length; i++){ //loop to search
             maybeString = tempArr[i]; //search variable declaration
             if (typeof maybeString === 'string') { //check for string
-                newString += maybeString + " "; //concat with space
+                stArr.push(maybeString);
             }
+        var newString = stArr.join(' '); //create item to return         
         }       
         return newString; //return new string
 }
