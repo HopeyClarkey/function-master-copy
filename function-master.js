@@ -45,19 +45,20 @@ function valuesToString(object) {
 function arrayOrObject(collection) {
     //Should take one argument and return 'array' if its an array and 
     //'object' if its an object"
-    if (Array.isArray(collection) === true) { 
-        return "array";
-     } else if (typeof collection === "object"){
-        return "object";
-}
-//  }
+    if (Array.isArray(collection) === true) { //check if object is array
+        return "array";     //return "array" if so
+     } else if (typeof collection === "object"){ // check if object
+        return "object";    //return "object" if so
+    }
 }
 //////////////////////////////////////////////////////////////////////
 // Function 5 - Capitalize Word //////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
 function capitalizeWord(string) {
-    //Should take a string of one word, and return the word with its first letter capitalized
+    // Should take a string of one word, and return the word with its 
+    // first letter capitalized
+    var newString = string[0].toUpperCase();
 }
 
 //////////////////////////////////////////////////////////////////////
