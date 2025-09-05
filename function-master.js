@@ -26,12 +26,17 @@ function keysToString(object) {
 function valuesToString(object) {
     //Should take an object and return all its string values in a string 
     //each separated with a space"
-    var tempArr = Object.values(object);
-    let newString = tempArr.join(' ')
-    console.log(newString);
-    return newString;
+    var newString = ''; //create item to return
+    var tempArr = Object.values(object); //extract values from objects
+        for (i = 0; i < tempArr.length; i++){ //loop to search
+            maybeString = tempArr[i]; //search variable declaration
+            if (typeof maybeString === 'string') { //check for string
+                newString += maybeString + " "; //concat with space
+            }
+        }       
+        return newString; //return new string
 }
- valuesToString({ a: "one", b: "two", ponies: "crayons", something: {}, dingle: "dangle"});
+
 //////////////////////////////////////////////////////////////////////
 // Function 4 - Array or Object //////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
