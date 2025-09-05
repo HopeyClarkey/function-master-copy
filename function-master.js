@@ -4,7 +4,7 @@
 
 function objectValues(object) {
     // should take an object and return its values into an array
-    return Object.values(object);
+    return Object.values(object); //array method return
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -14,9 +14,9 @@ function objectValues(object) {
 function keysToString(object) {
     // Should take an object and return all its string values separated 
     // by a space
-    var tempArr = Object.keys(object);
-    let newString = tempArr.join(' ')
-    return newString;
+    var tempArr = Object.keys(object); // create temp array of keys
+    let newString = tempArr.join(' ') // create new string with join
+    return newString; 
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -45,6 +45,19 @@ function valuesToString(object) {
 function arrayOrObject(collection) {
     //Should take one argument and return 'array' if its an array and 
     //'object' if its an object"
+    if(typeof collection != 'string'){
+        if (typeof collection != 'number'){
+            if (typeof collection != 'boolean'){
+                if (typeof collection != 'undefined'){
+                    if (collection !== null){
+                        if ( Array.isArray(collection) || typeof collection === 'object'){
+                            return 'array';
+                        } 
+                    }
+                }
+            }
+        }
+    }
 }
 
 //////////////////////////////////////////////////////////////////////
