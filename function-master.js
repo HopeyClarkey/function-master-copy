@@ -34,7 +34,7 @@ function valuesToString(object) {
                 stArr.push(maybeString);
             }
         var newString = stArr.join(' '); //create item to return         
-        }       
+        }
         return newString; //return new string
 }
 
@@ -45,21 +45,13 @@ function valuesToString(object) {
 function arrayOrObject(collection) {
     //Should take one argument and return 'array' if its an array and 
     //'object' if its an object"
-    if(typeof collection != 'string'){
-        if (typeof collection != 'number'){
-            if (typeof collection != 'boolean'){
-                if (typeof collection != 'undefined'){
-                    if (collection !== null){
-                        if ( Array.isArray(collection) || typeof collection === 'object'){
-                            return 'array';
-                        } 
-                    }
-                }
-            }
-        }
-    }
+    if (Array.isArray(collection) === true) { 
+        return "array";
+     } else if (typeof collection === "object"){
+        return "object";
 }
-
+//  }
+}
 //////////////////////////////////////////////////////////////////////
 // Function 5 - Capitalize Word //////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
@@ -82,6 +74,7 @@ function capitalizeAllWords(string) {
 
 function welcomeMessage(object) {
     //Should take an object with a name property and return 'Welcome <Name>!'
+    return  "Welcome " + object.name[0];
 }
 
 //////////////////////////////////////////////////////////////////////
