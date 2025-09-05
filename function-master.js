@@ -2,6 +2,8 @@
 // Function 1 - Object Values ////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
+const { slice } = require("lodash");
+
 function objectValues(object) {
     // should take an object and return its values into an array
     return Object.values(object); //array method return
@@ -58,11 +60,10 @@ function arrayOrObject(collection) {
 function capitalizeWord(string) {
     // Should take a string of one word, and return the word with its 
     // first letter capitalized
-    var newString = string.split("");
-    var capitalLetter = newString[0].toUpperCase();
-    newString.splice(0, 1, capitalLetter);
-    newString.join();
-    return newString;
+    var capitalLetter = string.charAt(0)
+    capitalLetter = capitalLettter.toUpperCaSE();
+    var restOfWord = string.slice(1)
+    return capitalLetter + restOfWord;
 }
 //////////////////////////////////////////////////////////////////////
 // Function 6 - Capitalize All Words /////////////////////////////////
