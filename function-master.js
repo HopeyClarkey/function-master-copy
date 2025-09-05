@@ -58,8 +58,12 @@ function arrayOrObject(collection) {
 function capitalizeWord(string) {
     // Should take a string of one word, and return the word with its 
     // first letter capitalized
-    var newString = string[0].toUpperCase();
+    var newArray = string.split();
+    newArray[0].toUpperCase();
+    var newString =newArray.join();
+    return newString;
 }
+ console.log(capitalizeWord('hope'));
 
 //////////////////////////////////////////////////////////////////////
 // Function 6 - Capitalize All Words /////////////////////////////////
