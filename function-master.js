@@ -70,18 +70,16 @@ function capitalizeWord(string) {
 function capitalizeAllWords(string) {
     //Should take a string of words and return a string with all 
     //the words capitalized
-    let stArr = [];
-    let someStrings = string.split(' ');
-    for (i = 0; i < someStrings.length; i++){
-        let singleWord = string[i];
-        let capitalLetter = singleWord.charAt(0);
-        capitalLetter = capitalLetter.toUpperCase();
-        let restOfWord = singleWord.slice(1);
-        let newWord = capitalLetter + restOfWord;
-        stArr.push(newWord);
-    }
+    var stArr = [];           //create function scoped storage array
+    var strngArr = string.split(' ');//declare function scoped split string array
+    console.log(strngArr)
+       for (let i = 0; i < strngArr; i++){            //loop through
+    stArr.push(strngArr[i][0].toUpperCase() + strngArr[i].slice(1));
+}
+    console.log(stArr);
 }
 
+console.log(capitalizeAllWords('this is a string of words'));
 //////////////////////////////////////////////////////////////////////
 // Function 7 - Welcome Message //////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
