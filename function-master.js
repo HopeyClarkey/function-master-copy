@@ -14,8 +14,9 @@ function objectValues(object) {
 function keysToString(object) {
     // Should take an object and return all its string values separated 
     // by a space
-        var tempArr = object.keys(object);
-        tempArr.join(' ');
+    var tempArr = Object.keys(object);
+    let newString = tempArr.join(' ')
+    return newString;
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -25,10 +26,12 @@ function keysToString(object) {
 function valuesToString(object) {
     //Should take an object and return all its string values in a string 
     //each separated with a space"
-    var tempArr = object.values(object);
-    tempArr.join(' ');
+    var tempArr = Object.values(object);
+    let newString = tempArr.join(' ')
+    console.log(newString);
+    return newString;
 }
-
+ valuesToString({ a: "one", b: "two", ponies: "crayons", something: {}, dingle: "dangle"});
 //////////////////////////////////////////////////////////////////////
 // Function 4 - Array or Object //////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
