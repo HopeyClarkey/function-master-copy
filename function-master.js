@@ -60,7 +60,9 @@ function capitalizeWord(string) {
     // first letter capitalized
     var newString = string.split("");
     var capitalLetter = newString[0].toUpperCase();
-    return newString.splice(0, 1, capitalLetter);
+    newString.splice(0, 1, capitalLetter);
+    newString.join();
+    return newString;
 }
 //////////////////////////////////////////////////////////////////////
 // Function 6 - Capitalize All Words /////////////////////////////////
