@@ -58,9 +58,9 @@ function arrayOrObject(collection) {
 function capitalizeWord(string) {
     // Should take a string of one word, and return the word with its 
     // first letter capitalized
-    var capitalLetter = string.charAt(0)
-    capitalLetter = capitalLettter.toUpperCase();
-    var restOfWord = string.slice(1)
+    var capitalLetter = string.charAt(0);
+    capitalLetter = capitalLetter.toUpperCase();
+    var restOfWord = string.slice(1);
     return capitalLetter + restOfWord;
 }
 //////////////////////////////////////////////////////////////////////
