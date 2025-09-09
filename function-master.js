@@ -86,15 +86,18 @@ function welcomeMessage(object) {
     //Should take an object with a name property and return 'Welcome <Name>!'
     return  "Welcome " + object.name[0].toUpperCase() + object.name.slice(1) + "!";
 }
-console.log(welcomeMessage({name: 'hope'}));
+
 //////////////////////////////////////////////////////////////////////
 // Function 8 - Profile Info /////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
 function profileInfo(object) {
     //Should take an object with a name an a species and return '<Name> is a <Species>
+    return object.name[0].toUpperCase() + object.name.slice(1) + 
+    " is a " + 
+    object.species[0].toUpperCase() + object.species.slice(1);
 }
-
+console.log(profileInfo({name: 'logan', species: 'labrottie'}));
 //////////////////////////////////////////////////////////////////////
 // Function 9 - Maybe Noises /////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
