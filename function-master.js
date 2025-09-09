@@ -134,6 +134,9 @@ function hasWord(string, word) {
 function addFriend (name, object) {
     //Should take a name and an object and add the name to the object's
     // friends array then return the object
+    object.friends[object.friends.length] = name;
+    return object;
+
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -141,10 +144,16 @@ function addFriend (name, object) {
 //////////////////////////////////////////////////////////////////////
 
 function isFriend(name, object) {
-    //Should take a name and an object and return true if <name> is a 
+    //Should take a name and an object and return true if <name> is a
     //friend of <object> and false otherwise"
+    if (object.friends.includes(name)){
+        return true;
+    } else if (!"friends" in object){
+     return false;
+    } else {
+    return false;
+    }
 }
-
 //////////////////////////////////////////////////////////////////////
 // Function 13 - Non-Friends /////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
