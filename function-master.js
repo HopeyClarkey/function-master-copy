@@ -72,11 +72,11 @@ function capitalizeAllWords(string) {
     //the words capitalized
     var stArr = [];           //create function scoped storage array
     var strngArr = string.split(' ');//declare function scoped split string array
-    console.log(strngArr)
-       for (let i = 0; i < strngArr; i++){            //loop through
+       for (let i = 0; i < strngArr.length; i++){            //loop through
     stArr.push(strngArr[i][0].toUpperCase() + strngArr[i].slice(1));
 }
-    console.log(stArr);
+    stArr= stArr.join(' ');
+    return stArr;
 }
 
 console.log(capitalizeAllWords('this is a string of words'));
