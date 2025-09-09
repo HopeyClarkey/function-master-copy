@@ -97,7 +97,7 @@ function profileInfo(object) {
     " is a " + 
     object.species[0].toUpperCase() + object.species.slice(1);
 }
-console.log(profileInfo({name: 'logan', species: 'labrottie'}));
+
 //////////////////////////////////////////////////////////////////////
 // Function 9 - Maybe Noises /////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
@@ -105,6 +105,11 @@ console.log(profileInfo({name: 'logan', species: 'labrottie'}));
 function maybeNoises(object) {
     //Should take an object, if this object has a noises array return 
     //them as a string separated by a space, if there are no noises return 'there are no noises'
+    if (Array.isArray(object.noises) && object.noises.length > 0){
+        return object.noises.join(' '); 
+    } else {
+        return "there are no noises";
+    }
 }
 
 //////////////////////////////////////////////////////////////////////
