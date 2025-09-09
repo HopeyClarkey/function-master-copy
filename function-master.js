@@ -119,6 +119,12 @@ function maybeNoises(object) {
 function hasWord(string, word) {
     //Should take a string of words and a word and return true if <word> 
     //is in <string of words>, otherwise return false.
+    let wrdArr = string.split(' ');
+    for (i =0; i < wrdArr.length; i++){
+        if (wrdArr[i] === word){
+            return true;
+    } 
+}       return false;
 }
 
 //////////////////////////////////////////////////////////////////////
