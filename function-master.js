@@ -159,7 +159,16 @@ function isFriend(name, object) {
 function nonFriends(name, array) {
     //Should take a name and a list of people, and return a list of 
     //all the names that <name> is not friends with
-}
+        let stArr = []; // Create storage array
+        for (let person of array) { //use for of loop to check
+            if (person.name !== name){ //if the name does not equal 
+            if (!person.friends.includes(name)) {
+                stArr.push(person.name);
+            }
+        }
+        }
+        return stArr;
+    }
 
 //////////////////////////////////////////////////////////////////////
 // Function 14 - Update Object ///////////////////////////////////////
@@ -169,6 +178,7 @@ function updateObject(object, key, value) {
     // Should take an object, a key and a value. Should update the 
     // property <key> on <object> with new <value>. If <key> does not 
     // exist on <object> create it.
+
 }
 
 //////////////////////////////////////////////////////////////////////
