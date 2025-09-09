@@ -146,12 +146,10 @@ function addFriend (name, object) {
 function isFriend(name, object) {
     //Should take a name and an object and return true if <name> is a
     //friend of <object> and false otherwise"
-    if (object.friends.includes(name)){
-        return true;
-    } else if (!"friends" in object){
-     return false;
+    if (Array.isArray(object.friends)){
+        return object.friends.includes(name);
     } else {
-    return false;
+        return false;
     }
 }
 //////////////////////////////////////////////////////////////////////
