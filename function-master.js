@@ -200,7 +200,9 @@ function removeProperties(object, array) {
 
 function dedup(array) {
     //Should take an array and return an array with all the duplicates removed
-    
+    return [...new Set(array)]; //uses spread and set to compare dups and return
+//set is a new method I am trying, like a box with no duplicates and spread puts
+//them back into an array? I think?
 }
 
 //////////////////////////////////////////////////////////////////////
