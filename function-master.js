@@ -162,7 +162,7 @@ function nonFriends(name, array) {
         let stArr = []; // Create storage array
         for (let person of array) { //use for of loop to check
             if (person.name !== name){ //if the name does not equal 
-            if (!person.friends.includes(name)) {
+            if (!person.friends.includes(name)) { 
                 stArr.push(person.name);
             }
         }
@@ -178,7 +178,8 @@ function updateObject(object, key, value) {
     // Should take an object, a key and a value. Should update the 
     // property <key> on <object> with new <value>. If <key> does not 
     // exist on <object> create it.
-
+    object[key] = value;//adds or updates key:value within object
+    return object;//returns object
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -188,6 +189,9 @@ function updateObject(object, key, value) {
 function removeProperties(object, array) {
     // Should take an object and an array of strings. Should remove 
     // any properties on <object> that are listed in <array>
+        for (let i = 0; i < array.length; i++){//loops through array
+            delete object[array[i]];//removes key from object if in array
+        }
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -195,7 +199,8 @@ function removeProperties(object, array) {
 //////////////////////////////////////////////////////////////////////
 
 function dedup(array) {
-    //Should take an array and return an array with all the duplicates removed"
+    //Should take an array and return an array with all the duplicates removed
+    
 }
 
 //////////////////////////////////////////////////////////////////////
